@@ -1,14 +1,32 @@
-﻿CREATE TABLE [dbo].[Product]
-(
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
-	[Name] NVARCHAR(50) NOT NULL,
-	[Price] FLOAT NOT NULL, --unsigned 
-	[SizeFirst] CHAR,
-	[SizeSecond] CHAR,
-	[SizeThird] CHAR,
-	[Weight] FLOAT NOT NULL,
-	[Manufacturer] NVARCHAR(50) NOT NULL,
-	[ProductionYear] DATETIME2 NOT NULL
+﻿CREATE TABLE [dbo].[Product] (
+	Id bigint NOT NULL IDENTITY(1,1),
+	[Name] nvarchar NOT NULL,
+	Price decimal NOT NULL,
+	[Length] float NOT NULL,
+	Width float NOT NULL,
+	Height float NOT NULL,
+	[Weight] float NOT NULL,
+	Manufacturer nvarchar(50) NOT NULL,
+	ProductionYear date NOT NULL,
+	MaxPower float NOT NULL,
+	NumberOfPrograms int,
+	Color nvarchar(20),
+	BowlVolume float,
+	ProductShape nvarchar(20),
+	ProductLife int,
+	NoiseLevel int,
+	MinTemperature int,
+	NumberOfToasts int,
+	BatteryLife int,
+	PowerRegulator bit,
+	Timer bit,
+	Defrost bit,
+	SuperFrost bit,
+	Backlight bit,
+	Display bit,
+	CarboneFilter bit,
+	WetCleaning bit,
+	GlassCase bit,
+	RemoteController bit,
+	WithBattery bit,
 )
-
-

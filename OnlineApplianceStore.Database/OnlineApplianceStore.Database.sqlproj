@@ -60,7 +60,13 @@
     <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\City.sql" />
+    <Build Include="Stored Procedures\DeleteByCustomerId.sql" />
     <Build Include="Tables\Product.sql" />
+    <Build Include="Tables\Customer.sql" />
+    <Build Include="Tables\ProductStorage.sql" />
+    <Build Include="Tables\Role.sql" />
+    <Build Include="Tables\Order.sql" />
+    <Build Include="Tables\OrderProduct.sql" />
+    <Build Include="Tables\Storage.sql" />
   </ItemGroup>
 </Project>
