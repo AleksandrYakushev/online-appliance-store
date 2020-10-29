@@ -1,17 +1,15 @@
 ﻿CREATE TABLE [dbo].[Customer] (
-	Id bigint NOT NULL Identity(1,1),
-	RoleId int NOT NULL,
-	Phone bigint NOT NULL,
-	[Name] nvarchar(20),
-	LastName nvarchar(20),
-	[Address] nvarchar(100),
-	Email nvarchar(50),
-	Birthday date,
-	FirstOrderDate datetime2,
-	LastOrderDate datetime2,
-	IsDeleted bit NOT NULL,
-  CONSTRAINT [PK_CUSTOMER] PRIMARY KEY CLUSTERED
-  (
-  [Id] ASC
-  ) WITH (IGNORE_DUP_KEY = OFF)
-)
+	Id BIGINT PRIMARY KEY NOT NULL IDENTITY (1, 1),
+	RoleId INT FOREIGN KEY (RoleId) REFERENCES [dbo].[Role]([Id]) NOT NULL,
+	CityId INT FOREIGN KEY (CityId) REFERENCES [dbo].[City]([Id]) NOT NULL,
+	[Name] NVARCHAR(30),
+	LastName NVARCHAR(30),
+	Phone NVARCHAR(20) NOT NULL,
+	[Password] nvarchar(30) NOT NULL,
+	[Address] NVARCHAR(100),
+	Email NVARCHAR(50),
+	Birthday DATE,
+	RegistrationDate DATETIME2,
+	LastUpdateDate DATETIME2,
+	IsDeleted BIT NOT NULL
+	)

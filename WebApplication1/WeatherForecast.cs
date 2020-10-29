@@ -1,6 +1,6 @@
 using System;
 
-namespace OnlineApplianceStore.API
+namespace WebApplication1
 {
     public class WeatherForecast
     {

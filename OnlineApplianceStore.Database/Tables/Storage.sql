@@ -1,4 +1,4 @@
 ﻿CREATE TABLE [dbo].[Storage] (
-	Id int NOT NULL IDENTITY (1, 1),
-	[Name] nvarchar(20) UNIQUE NOT NULL,
+	Id INT PRIMARY KEY NOT NULL IDENTITY (1, 1),
+	[Name] NVARCHAR(20) UNIQUE NOT NULL,
 )

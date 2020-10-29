@@ -1,9 +1,8 @@
 ﻿CREATE TABLE [dbo].[Order] (
-	Id bigint NOT NULL Identity (1, 1),
-	ProductId bigint NOT NULL,
-	CustomerId bigint NOT NULL,
-  CONSTRAINT [PK_ORDER] PRIMARY KEY CLUSTERED
-  (
-  [Id] ASC
-  ) WITH (IGNORE_DUP_KEY = OFF)
+	Id BIGINT PRIMARY KEY NOT NULL IDENTITY (1, 1),
+	ProductId BIGINT FOREIGN KEY (ProductId) REFERENCES [dbo].[Product]([Id]) NOT NULL,
+	CustomerId BIGINT FOREIGN KEY (CustomerId) REFERENCES [dbo].[Customer]([Id]) NOT NULL,
+	OperationDate DATETIME2 NOT NULL,
+	PaymentTypeId INT FOREIGN KEY (PaymentTypeId) REFERENCES [dbo].[PaymentType]([Id]) NOT NULL,
+	TotalAmount DECIMAL NOT NULL,
 )

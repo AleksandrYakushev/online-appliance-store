@@ -1,10 +1,6 @@
 ﻿CREATE TABLE [dbo].[ProductStorage] (
-	Id bigint NOT NULL Identity(1,1),
-	ProductId bigint NOT NULL,
-	StorageId int NOT NULL,
-	ProductCount int NOT NULL,
-  CONSTRAINT [PK_PRODUCTSTORAGE] PRIMARY KEY CLUSTERED
-  (
-  [Id] ASC
-  ) WITH (IGNORE_DUP_KEY = OFF)
+	Id BIGINT PRIMARY KEY NOT NULL IDENTITY (1, 1),
+	ProductId BIGINT FOREIGN KEY (ProductID) REFERENCES [dbo].[Product]([Id]) NOT NULL,
+	StorageId INT FOREIGN KEY (StorageId) REFERENCES [dbo].[Storage]([Id]) NOT NULL,
+	ProductCount INT NOT NULL
 )

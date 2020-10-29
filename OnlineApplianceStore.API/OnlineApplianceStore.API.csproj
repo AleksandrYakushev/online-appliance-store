@@ -1,12 +1,32 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+	</PropertyGroup>
+	<ItemGroup>
+		<Folder Include="Configure\" />
+		<Folder Include="Services\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+		<PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	</ItemGroup>
+
+	  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\OnlineApplianceStore.API.xml</DocumentationFile>
+  </PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\OnlineApplianceStore.Business\OnlineApplianceStore.Business.csproj" />
+
+</ItemGroup>
 
 
 </Project>

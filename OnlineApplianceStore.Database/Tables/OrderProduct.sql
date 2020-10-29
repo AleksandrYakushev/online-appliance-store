@@ -1,10 +1,6 @@
 ﻿CREATE TABLE [dbo].[OrderProduct] (
-	Id bigint NOT NULL IDENTITY (1, 1),
-	OrderId bigint NOT NULL,
-	ProductId bigint NOT NULL,
-	ProductAmount int NOT NULL,
-  CONSTRAINT [PK_ORDERPRODUCT] PRIMARY KEY CLUSTERED
-  (
-  [Id] ASC
-  ) WITH (IGNORE_DUP_KEY = OFF)
-)
+	Id BIGINT PRIMARY KEY NOT NULL IDENTITY (1, 1),
+	OrderId BIGINT FOREIGN KEY (OrderId) REFERENCES [dbo].[Order]([Id]) NOT NULL,
+	ProductId BIGINT FOREIGN KEY (ProductId) REFERENCES [dbo].[Product]([Id]) NOT NULL,
+	ProductAmount INT NOT NULL
+	)

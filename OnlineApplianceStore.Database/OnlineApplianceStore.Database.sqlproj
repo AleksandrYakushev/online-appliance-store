@@ -58,9 +58,9 @@
     <Folder Include="Properties" />
     <Folder Include="Stored Procedures" />
     <Folder Include="Tables" />
+    <Folder Include="Stored Procedures\Customer" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Stored Procedures\DeleteByCustomerId.sql" />
     <Build Include="Tables\Product.sql" />
     <Build Include="Tables\Customer.sql" />
     <Build Include="Tables\ProductStorage.sql" />
@@ -68,5 +68,12 @@
     <Build Include="Tables\Order.sql" />
     <Build Include="Tables\OrderProduct.sql" />
     <Build Include="Tables\Storage.sql" />
+    <Build Include="Stored Procedures\Customer\Customer_DeleteById.sql" />
+    <Build Include="Stored Procedures\Customer\Customer_SelectById.sql" />
+    <Build Include="Tables\City_1.sql" />
+    <Build Include="Tables\PaymentType.sql" />
+    <Build Include="Stored Procedures\Customer\Customer_Create.sql" />
+    <Build Include="Stored Procedures\Customer\Customer_UpdateById.sql" />
+    <Build Include="Stored Procedures\Customer\Customer_SelectAll.sql" />
   </ItemGroup>
 </Project>
