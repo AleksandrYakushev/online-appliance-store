@@ -1,0 +1,32 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Customer] (Table)
+       [dbo].[Order] (Table)
+       [dbo].[OrderProduct] (Table)
+       [dbo].[Product] (Table)
+       [dbo].[ProductStorage] (Table)
+       [dbo].[Role] (Table)
+       [dbo].[Storage] (Table)
+       Foreign Key: unnamed constraint on [dbo].[Customer] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Order] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Order] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[OrderProduct] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[OrderProduct] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[ProductStorage] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[ProductStorage] (Foreign Key)
+       [dbo].[DeleteCustomerById] (Procedure)
+
+** Supporting actions
+
+The project and target databases have different collation settings. Deployment errors might occur.
+

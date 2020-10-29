@@ -1,0 +1,38 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Customer]
+       [dbo].[Order]
+       [dbo].[OrderProduct]
+       [dbo].[Product]
+       [dbo].[ProductStorage]
+       [dbo].[Role]
+       [dbo].[Storage]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       [dbo].[Order_fk0] (Foreign Key)
+       [dbo].[OrderProduct_fk0] (Foreign Key)
+       [dbo].[OrderProduct_fk1] (Foreign Key)
+       [dbo].[ProductStorage_fk0] (Foreign Key)
+       [dbo].[ProductStorage_fk1] (Foreign Key)
+     Table rebuild
+       [dbo].[Customer] (Table)
+       [dbo].[Order] (Table)
+       [dbo].[OrderProduct] (Table)
+       [dbo].[Product] (Table)
+       [dbo].[ProductStorage] (Table)
+       [dbo].[Role] (Table)
+       [dbo].[Storage] (Table)
+
+** Supporting actions
+     Refresh
+       [dbo].[DeleteCustomerById] (Procedure)
+
+The project and target databases have different collation settings. Deployment errors might occur.
+

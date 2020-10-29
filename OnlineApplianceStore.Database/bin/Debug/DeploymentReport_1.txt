@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Order]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Order] (Table)
+     Create
+       Foreign Key: unnamed constraint on [dbo].[Order] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[OrderHistory] (Foreign Key)
+
+** Supporting actions
+
+The project and target databases have different collation settings. Deployment errors might occur.
+

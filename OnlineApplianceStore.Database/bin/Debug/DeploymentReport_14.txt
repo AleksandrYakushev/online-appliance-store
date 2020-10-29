@@ -1,0 +1,22 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       [dbo].[PK_PRODUCTSTORAGE] on [dbo].[ProductStorage]
+     Possible data issues
+       None
+
+** User actions
+     Alter
+       [dbo].[Customer] (Table)
+     Create
+       [dbo].[PK_PRODUCTSTORAGE] (Primary Key)
+
+** Supporting actions
+     Refresh
+       [dbo].[DeleteCustomerById] (Procedure)
+
+The project and target databases have different collation settings. Deployment errors might occur.
+

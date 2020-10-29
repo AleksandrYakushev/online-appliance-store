@@ -1,0 +1,68 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Customer]
+       [dbo].[Order]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Customer].[FirstOrderDate] is being dropped, data loss could occur.
+       The column [dbo].[Customer].[LastOrderDate] is being dropped, data loss could occur.
+       The column [dbo].[Customer].[CityId] on table [dbo].[Customer] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[Customer].[Password] on table [dbo].[Customer] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[Order].[PaymentType] is being dropped, data loss could occur.
+       The column [dbo].[Order].[OperationDate] on table [dbo].[Order] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[Order].[PaymentTypeId] on table [dbo].[Order] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[Customer] (Foreign Key)
+       unnamed constraint on [dbo].[Order] (Foreign Key)
+       unnamed constraint on [dbo].[Order] (Foreign Key)
+       unnamed constraint on [dbo].[OrderProduct] (Foreign Key)
+     Table rebuild
+       [dbo].[Customer] (Table)
+       [dbo].[Order] (Table)
+     Create
+       [dbo].[City] (Table)
+       [dbo].[PaymentType] (Table)
+       Unique Constraint: unnamed constraint on [dbo].[Role] (Unique Constraint)
+       Unique Constraint: unnamed constraint on [dbo].[Storage] (Unique Constraint)
+       Foreign Key: unnamed constraint on [dbo].[Customer] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Order] (Foreign Key)
+       [dbo].[Customer_Create] (Procedure)
+       [dbo].[Customer_DeleteById] (Procedure)
+       [dbo].[Customer_SelectAll] (Procedure)
+       [dbo].[Customer_SelectById] (Procedure)
+       [dbo].[Customer_UpdateById] (Procedure)
+
+** Supporting actions
+     Create
+       Foreign Key: unnamed constraint on [dbo].[Customer] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Order] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Order] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[OrderProduct] (Foreign Key)
+
+The column [dbo].[Customer].[FirstOrderDate] is being dropped, data loss could occur.
+The column [dbo].[Customer].[LastOrderDate] is being dropped, data loss could occur.
+The column [dbo].[Customer].[CityId] on table [dbo].[Customer] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[Customer].[Password] on table [dbo].[Customer] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[Order].[PaymentType] is being dropped, data loss could occur.
+The column [dbo].[Order].[OperationDate] on table [dbo].[Order] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[Order].[PaymentTypeId] on table [dbo].[Order] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+If this deployment is executed, changes to [dbo].[Customer] might introduce run-time errors in [dbo].[DeleteCustomerById].
+The project and target databases have different collation settings. Deployment errors might occur.
+

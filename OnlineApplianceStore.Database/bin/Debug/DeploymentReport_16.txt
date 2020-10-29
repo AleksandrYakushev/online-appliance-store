@@ -1,0 +1,39 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[Customer] (Foreign Key)
+       unnamed constraint on [dbo].[OrderProduct] (Foreign Key)
+       unnamed constraint on [dbo].[OrderProduct] (Foreign Key)
+       unnamed constraint on [dbo].[ProductStorage] (Foreign Key)
+       unnamed constraint on [dbo].[ProductStorage] (Foreign Key)
+     Alter
+       [dbo].[Customer] (Table)
+       [dbo].[OrderProduct] (Table)
+       [dbo].[ProductStorage] (Table)
+
+** Supporting actions
+     Create
+       Foreign Key: unnamed constraint on [dbo].[Customer] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[OrderProduct] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[OrderProduct] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[ProductStorage] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[ProductStorage] (Foreign Key)
+     Refresh
+       [dbo].[DeleteCustomerById] (Procedure)
+
+The column RoleId on table [dbo].[Customer] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column OrderId on table [dbo].[OrderProduct] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column ProductId on table [dbo].[OrderProduct] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column ProductId on table [dbo].[ProductStorage] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column StorageId on table [dbo].[ProductStorage] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The project and target databases have different collation settings. Deployment errors might occur.
+

@@ -1,0 +1,9 @@
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Core\bin\Debug\netcoreapp3.1\OnlineApplianceStore.Core.deps.json
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Core\bin\Debug\netcoreapp3.1\OnlineApplianceStore.Core.dll
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Core\obj\Debug\netcoreapp3.1\OnlineApplianceStore.Core.AssemblyInfoInputs.cache
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Core\obj\Debug\netcoreapp3.1\OnlineApplianceStore.Core.AssemblyInfo.cs
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Core\bin\Debug\netcoreapp3.1\OnlineApplianceStore.Core.pdb
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Core\obj\Debug\netcoreapp3.1\OnlineApplianceStore.Core.csproj.CoreCompileInputs.cache
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Core\obj\Debug\netcoreapp3.1\OnlineApplianceStore.Core.dll
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Core\obj\Debug\netcoreapp3.1\OnlineApplianceStore.Core.pdb
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Core\obj\Debug\netcoreapp3.1\OnlineApplianceStore.Core.csprojAssemblyReference.cache
