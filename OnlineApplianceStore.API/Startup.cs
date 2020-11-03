@@ -1,4 +1,5 @@
 using Autofac;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -43,6 +44,8 @@ namespace OnlineApplianceStore.API
 
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
             services.Configure<DBSettings>(Configuration);
             //services.Configure<UrlSettings>(Configuration);

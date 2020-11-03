@@ -16,7 +16,6 @@ C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\Onlin
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\obj\Debug\netcoreapp3.1\OnlineApplianceStore.API.pdb
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\obj\Debug\netcoreapp3.1\OnlineApplianceStore.API.genruntimeconfig.cache
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\obj\Debug\netcoreapp3.1\OnlineApplianceStore.API.csprojAssemblyReference.cache
-C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\bin\Debug\netcoreapp3.1\OnlineApplianceStore.Business.dll
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\bin\Debug\netcoreapp3.1\OnlineApplianceStore.Business.pdb
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\obj\Debug\netcoreapp3.1\OnlineApplianceStore.API.csproj.CopyComplete
@@ -49,6 +48,8 @@ C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\Onlin
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\bin\Debug\netcoreapp3.1\Autofac.Integration.Mvc.dll
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\obj\Debug\netcoreapp3.1\OnlineApplianceStore.API.csproj.CoreCompileInputs.cache
-C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\obj\Debug\netcoreapp3.1\OnlineApplianceStore.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\obj\Debug\netcoreapp3.1\OnlineApplianceStore.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\obj\Debug\netcoreapp3.1\OnlineApplianceStore.API.MvcApplicationPartsAssemblyInfo.cache

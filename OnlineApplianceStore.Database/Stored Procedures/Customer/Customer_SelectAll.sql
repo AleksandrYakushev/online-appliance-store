@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[Customer_SelectAll]
 AS
 	SELECT 
-	C.Id, C.RoleId, C.Phone, C.[Name], C.LastName, C.[Address], C.Email, C.Birthday, C.RegistrationDate, C.LastUpdateDate, 
+	C.Id, C.[Name], C.LastName, C.RegistrationDate, C.Birthday, C.[Address], C.Email, C.Phone,
 	R.Id, R.[Name],
 	CY.Id, CY.[Name]
 	FROM [dbo].[Customer] as C

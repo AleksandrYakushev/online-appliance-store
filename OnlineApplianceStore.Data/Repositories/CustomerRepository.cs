@@ -84,7 +84,7 @@ namespace OnlineApplianceStore.Data.Repositories
                         customer.City = city;
                         return customer;
                     },
-                    splitOn: "Id",
+                    splitOn: "C.Id",
                     commandType: CommandType.StoredProcedure
                     ).ToList();
             }

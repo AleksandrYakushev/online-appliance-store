@@ -37,7 +37,7 @@ namespace OnlineApplianceStore.API.Controllers
             return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
-        [HttpGet]
+        [HttpGet("all")]
         public ActionResult<List<CustomerOutputModel>> GetAllCustomers()
         {
             var result = _customerManager.GetAllCustomers();

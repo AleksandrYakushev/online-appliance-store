@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "S+uTogauRWNxB4QHVZs6uUX6et8glKgi3NS9Z/2Wy+GVpmVUV+iYP4NQeK2N50ygF3XD103Xy6lqXXPVjL/jDQ==",
+  "dgSpecHash": "Bhmv+7xile7615q/RgJtg0RHtgJSfKMLaMQw2TUmdbjpqKAK3kEXPgmM8xjdBPzwBjm9JcMRlVU3Cpw6crdVfw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Саша\\Desktop\\Repo\\OnlineApplianceStore\\online-appliance-store\\OnlineApplianceStore.API\\OnlineApplianceStore.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Саша\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\autofac.mvc5\\6.0.0\\autofac.mvc5.6.0.0.nupkg.sha512",
-    "C:\\Users\\Саша\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Саша\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
+    "C:\\Users\\Саша\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",

@@ -42,9 +42,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "AutoMapper": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[10.1.1, )"
+              "version": "[8.1.0, )"
             },
             "Autofac": {
               "target": "Package",
@@ -104,6 +104,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Autofac": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -170,6 +174,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Autofac": {
               "target": "Package",
               "version": "[6.0.0, )"
