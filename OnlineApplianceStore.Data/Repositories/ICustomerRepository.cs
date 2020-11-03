@@ -11,5 +11,6 @@ namespace OnlineApplianceStore.Data.Repositories
         DataWrapper<CustomerDto> DeleteCustomerById(long Id);
 
         DataWrapper<CustomerDto> CreateCustomer(CustomerDto customerDto);
+        DataWrapper<CustomerDto> UpdateCustomer(CustomerDto customerDto);
     }
 }

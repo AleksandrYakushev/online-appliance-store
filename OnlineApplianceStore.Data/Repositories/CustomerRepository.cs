@@ -19,20 +19,20 @@ namespace OnlineApplianceStore.Data.Repositories
             DbConnection = new SqlConnection(options.Value.ConnectionString);
         }
 
-        public DataWrapper<CustomerDto> SelectCustomerById(long id)
+        public DataWrapper<CustomerDto> SelectCustomerById(long customerId)
         {
             var data = new DataWrapper<CustomerDto>();
             try
             {
-                data.Data = DbConnection.Query<CustomerDto, CityDto, RoleDto, CustomerDto>(
+                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto, CustomerDto>(
                 StoredProcedure.SelectCustomerProcedure,
-                (lead, city, role) =>
+                (customer, role, city) =>
                 {
-                    lead.City = city;
-                    lead.Role = role;
-                    return lead;
+                    customer.Role = role;
+                    customer.City = city;
+                    return customer;
                 },
-                new { id },
+                new { customerId },
                 splitOn: "Id",
                 commandType: CommandType.StoredProcedure
                 ).SingleOrDefault();
@@ -50,12 +50,12 @@ namespace OnlineApplianceStore.Data.Repositories
             var data = new DataWrapper<CustomerDto>();
             try
             {
-                data.Data = DbConnection.Query<CustomerDto, CityDto, RoleDto, CustomerDto>(
+                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto,  CustomerDto>(
                     StoredProcedure.DeleteCustomerProcedure,
-                    (customer, city, role) =>
+                    (customer, role, city) =>
                     {
-                        customer.City = city;
                         customer.Role = role;
+                        customer.City = city;
                         return customer;
                     },
                     new { id },
@@ -76,14 +76,15 @@ namespace OnlineApplianceStore.Data.Repositories
             var data = new DataWrapper<List<CustomerDto>>();
             try
             {
-                data.Data = DbConnection.Query<CustomerDto, CityDto, RoleDto, CustomerDto>(
+                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto,  CustomerDto>(
                     StoredProcedure.SelectAllCustomersProcedure,
-                    (customer, city, role) =>
+                    (customer, role, city) =>
                     {
-                        customer.City = city;
                         customer.Role = role;
+                        customer.City = city;
                         return customer;
-                    }, splitOn: "Id",
+                    },
+                    splitOn: "Id",
                     commandType: CommandType.StoredProcedure
                     ).ToList();
             }
@@ -95,18 +96,64 @@ namespace OnlineApplianceStore.Data.Repositories
             return data;
         }
 
-        public DataWrapper<CustomerDto> CreateCustomer(CustomerDto customerDto)
+        public DataWrapper<CustomerDto> CreateCustomer(CustomerDto dto)
         {
             var data = new DataWrapper<CustomerDto>();
             try
             {
-                data.Data = DbConnection.Query<CustomerDto, CityDto, RoleDto, CustomerDto>(
+                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto, CustomerDto>(
                     StoredProcedure.CreateCustomerProcedure,
-                    (customer, city, role) =>
+                    (customer, role, city) =>
                     {
-                        customer.City = city;
                         customer.Role = role;
+                        customer.City = city;
                         return customer;
+                    },
+                    new {
+                        CityId = dto.City.Id,
+                        dto.Name,
+                        dto.LastName,
+                        dto.Birthday,
+                        dto.Address,
+                        dto.Phone,
+                        dto.Email,
+                        dto.Password
+                    },
+                    splitOn: "Id",
+                    commandType: CommandType.StoredProcedure
+                    ).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                data.ResultMessage = ex.Message;
+            }
+
+            return data;
+        }
+
+        public DataWrapper<CustomerDto> UpdateCustomer(CustomerDto dto)
+        {
+            var data = new DataWrapper<CustomerDto>();
+            try
+            {
+                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto, CustomerDto>(
+                    StoredProcedure.UpdateCustomerProcedure,
+                    (customer, role, city) =>
+                    {
+                        customer.Role = role;
+                        customer.City = city;
+                        return customer;
+                    },
+                    new
+                    {
+                        CityId = dto.City.Id,
+                        dto.Name,
+                        dto.LastName,
+                        dto.Birthday,
+                        dto.Address,
+                        dto.Phone,
+                        dto.Email,
+                        dto.Password
                     },
                     splitOn: "Id",
                     commandType: CommandType.StoredProcedure

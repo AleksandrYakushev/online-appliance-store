@@ -75,5 +75,6 @@
     <Build Include="Stored Procedures\Customer\Customer_Create.sql" />
     <Build Include="Stored Procedures\Customer\Customer_UpdateById.sql" />
     <Build Include="Stored Procedures\Customer\Customer_SelectAll.sql" />
+    <Build Include="Stored Procedures\Customer\Customer_Merge.sql" />
   </ItemGroup>
 </Project>

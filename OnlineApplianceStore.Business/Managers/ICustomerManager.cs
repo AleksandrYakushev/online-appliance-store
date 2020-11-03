@@ -11,5 +11,6 @@ namespace OnlineApplianceStore.Business.Managers
         DataWrapper<List<CustomerOutputModel>> GetAllCustomers();
         DataWrapper<CustomerOutputModel> GetCustomer(long id);
         DataWrapper<CustomerOutputModel> CreateCustomer(CustomerInputModel inputModel);
+        DataWrapper<CustomerOutputModel> UpdateCustomer(CustomerInputModel inputModel);
     }
 }

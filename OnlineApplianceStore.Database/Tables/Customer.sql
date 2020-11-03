@@ -1,15 +1,15 @@
 ﻿CREATE TABLE [dbo].[Customer] (
 	Id BIGINT PRIMARY KEY NOT NULL IDENTITY (1, 1),
-	RoleId INT FOREIGN KEY (RoleId) REFERENCES [dbo].[Role]([Id]) NOT NULL,
+	RoleId INT DEFAULT 1 FOREIGN KEY (RoleId) REFERENCES [dbo].[Role]([Id]) NOT NULL,
 	CityId INT FOREIGN KEY (CityId) REFERENCES [dbo].[City]([Id]) NOT NULL,
-	[Name] NVARCHAR(30),
-	LastName NVARCHAR(30),
+	[Name] NVARCHAR(30) NOT NULL,
+	LastName NVARCHAR(30) NOT NULL,
 	Phone NVARCHAR(20) NOT NULL,
 	[Password] nvarchar(30) NOT NULL,
-	[Address] NVARCHAR(100),
-	Email NVARCHAR(50),
-	Birthday DATE,
-	RegistrationDate DATETIME2,
-	LastUpdateDate DATETIME2,
-	IsDeleted BIT NOT NULL
+	[Address] NVARCHAR(100) NOT NULL,
+	Email NVARCHAR(50) UNIQUE NOT NULL,
+	Birthday DATE NOT NULL,
+	RegistrationDate DATETIME2 NOT NULL,
+	LastUpdateDate DATETIME2 NOT NULL,
+	IsDeleted BIT DEFAULT '0' NOT NULL
 	)

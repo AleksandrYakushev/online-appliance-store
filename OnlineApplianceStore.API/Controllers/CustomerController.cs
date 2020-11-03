@@ -12,15 +12,20 @@ namespace OnlineApplianceStore.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CustomerController : Controller
+    public class CustomerController : ControllerBase
     {
-        ICustomerRepository _repository;
-        CustomerManager _manager;
+        private ICustomerManager _customerManager;
+
+        public CustomerController(ICustomerManager customerManager)
+        {
+            _customerManager = customerManager;
+        }
+        
 
         [HttpGet("{id}")]
         public ActionResult<CustomerOutputModel> GetCustomer(long id)
         {
-            var result = _manager.GetCustomer(id);
+            var result = _customerManager.GetCustomer(id);
             if (result.IsOK)
             {
                 if (result.Data == null)
@@ -32,10 +37,10 @@ namespace OnlineApplianceStore.API.Controllers
             return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
-        [HttpGet("all")]
+        [HttpGet]
         public ActionResult<List<CustomerOutputModel>> GetAllCustomers()
         {
-            var result = _manager.GetAllCustomers();
+            var result = _customerManager.GetAllCustomers();
             if (result.IsOK)
             {
                 if(result.Data == null)
@@ -49,16 +54,43 @@ namespace OnlineApplianceStore.API.Controllers
 
         }
 
+        //example of valid data
+        //"name": "George",
+        //"lastName": "Ford",
+        //"birthday": "06.15.2008",
+        //"address": "address",
+        //"phone": "345678",
+        //"email": "email@gmail.com",
+        //"password": "password",
+        //"cityid": 1
         [HttpPost]
-        public ActionResult<List<CustomerOutputModel>> AddCustomer()
+        public ActionResult<List<CustomerOutputModel>> AddCustomer(CustomerInputModel inputModel)
         {
-            return null;
+            var result = _customerManager.CreateCustomer(inputModel);
+            if(result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
         [HttpPut]
-        public ActionResult<List<CustomerOutputModel>> UpdateCustomer()
+        public ActionResult<List<CustomerOutputModel>> UpdateCustomer(CustomerInputModel inputModel)
         {
-            return null;
+            var result = _customerManager.UpdateCustomer(inputModel);
+            if (result.IsOK)
+            {
+                if(result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
         [HttpDelete("{id}")]

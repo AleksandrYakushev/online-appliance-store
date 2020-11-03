@@ -2,7 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <StartupScript>(Blank)</StartupScript>
-    <StartAction>StartNone</StartAction>
+    <StartAction>StartScript</StartAction>
     <TargetConnectionString>Data Source=LAPTOP-LOJ61DGJ;Initial Catalog=OnlineApplianceStore;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False</TargetConnectionString>
     <TargetDatabase>OnlineApplianceStore</TargetDatabase>
   </PropertyGroup>
