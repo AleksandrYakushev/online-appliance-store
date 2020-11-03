@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using OnlineApplianceStore.Business.Models.Input;
+using OnlineApplianceStore.Business.Models.Mappings;
 using OnlineApplianceStore.Business.Models.Output;
 using OnlineApplianceStore.Data;
 using OnlineApplianceStore.Data.DTO;

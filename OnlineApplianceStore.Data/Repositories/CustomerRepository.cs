@@ -41,30 +41,7 @@ namespace OnlineApplianceStore.Data.Repositories
             {
                 data.ResultMessage = ex.Message;
             }
-            return data;
-        }
 
-        public DataWrapper<List<CustomerDto>> SelectAllCustomers()
-        {
-            DataWrapper<List<CustomerDto>> data = new DataWrapper<List<CustomerDto>>();
-            try
-            {
-                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto,  CustomerDto>(
-                    StoredProcedure.SelectAllCustomersProcedure,
-                    (customer, role, city) =>
-                    {
-                        customer.City = city;
-                        customer.Role = role;
-                        return customer;
-                    },
-                    splitOn: "Id",
-                    commandType: CommandType.StoredProcedure
-                    ).ToList();
-            }
-            catch (Exception ex)
-            {
-                data.ResultMessage = ex.Message;
-            }
             return data;
         }
 
@@ -94,6 +71,30 @@ namespace OnlineApplianceStore.Data.Repositories
             return data;
         }
 
+        public DataWrapper<List<CustomerDto>> SelectAllCustomers()
+        {
+            var data = new DataWrapper<List<CustomerDto>>();
+            try
+            {
+                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto,  CustomerDto>(
+                    StoredProcedure.SelectAllCustomersProcedure,
+                    (customer, role, city) =>
+                    {
+                        customer.Role = role;
+                        customer.City = city;
+                        return customer;
+                    },
+                    splitOn: "C.Id",
+                    commandType: CommandType.StoredProcedure
+                    ).ToList();
+            }
+            catch (Exception ex)
+            {
+                data.ResultMessage = ex.Message;
+            }
+
+            return data;
+        }
 
         public DataWrapper<CustomerDto> CreateCustomer(CustomerDto dto)
         {

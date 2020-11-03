@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿using OnlineApplianceStore.Business.Models.Mappings;
 using OnlineApplianceStore.Business.Models.Output;
 using OnlineApplianceStore.Data.Repositories;
 using System;
@@ -10,10 +10,10 @@ namespace CRM.Business.Managers
     public class AuthManager
     {
         private ICustomerRepository _customerRepository;
-        private IMapper _mapper;
+        private CustomerMapper _mapper;
 
 
-        public AuthManager(ICustomerRepository customerRepository, IMapper mapper)
+        public AuthManager(ICustomerRepository customerRepository, CustomerMapper mapper)
         {
             _customerRepository = customerRepository;
             _mapper = mapper;
