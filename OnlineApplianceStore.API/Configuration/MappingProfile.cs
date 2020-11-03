@@ -1,14 +1,9 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Routing.Constraints;
-using Microsoft.VisualBasic.CompilerServices;
 using OnlineApplianceStore.Business.Models.Input;
 using OnlineApplianceStore.Business.Models.Output;
 using OnlineApplianceStore.Data.DTO;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace OnlineApplianceStore.API.Configuration
 {

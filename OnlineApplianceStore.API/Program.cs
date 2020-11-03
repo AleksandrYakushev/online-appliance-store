@@ -23,15 +23,3 @@ namespace OnlineApplianceStore.API
                 });
     }
 }
-
-//{
-//  "name": "strdsaing",
-//  "lastName": "striasdng",
-//  "birthday": "10.20.2000",
-//  "address": "strisdng",
-//  "phone": "123123",
-//  "email": "2@ASA",
-//  "password": "123",
-//  "cityId": 1
-//}
-

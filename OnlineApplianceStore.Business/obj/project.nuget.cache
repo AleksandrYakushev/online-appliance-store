@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "gl6xmuZjJVGpD/CSdSlUsragW7voVbWDIGOr5XCQL1Q+0pHaGkzbIV4Tsn17UiZFB/lqjmghx5jqEMsa/E4lUA==",
+  "dgSpecHash": "Sp4ejDf8yV+VsXxlsdvPZQom/KJsrUyaOz8fHiaRCyTWg/yvOPbuSrTimzKPK3cudVmRG6j6MsBPjT1iFcJ6Kg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Саша\\Desktop\\Repo\\OnlineApplianceStore\\online-appliance-store\\OnlineApplianceStore.Business\\OnlineApplianceStore.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Саша\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\autofac.mvc5\\6.0.0\\autofac.mvc5.6.0.0.nupkg.sha512",
-    "C:\\Users\\Саша\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Саша\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
+    "C:\\Users\\Саша\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.9\\microsoft.extensions.dependencyinjection.abstractions.3.1.9.nupkg.sha512",

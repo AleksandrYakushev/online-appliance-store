@@ -7,8 +7,6 @@ namespace OnlineApplianceStore.Business.Models.Output
     public class CustomerOutputModel
     {
         public long? Id { get; set; }
-        public string RoleName { get; set; }
-        public string CityName { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }
@@ -18,5 +16,7 @@ namespace OnlineApplianceStore.Business.Models.Output
         public string RegistrationDate { get; set; }
         public string LastUpdateDate { get; set; }
         public bool IsDeleted { get; set; }
+        public string RoleName { get; set; }
+        public string CityName { get; set; }
     }
 }
