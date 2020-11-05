@@ -50,6 +50,7 @@ namespace OnlineApplianceStore.API
             services.Configure<DBSettings>(Configuration);
             //services.Configure<UrlSettings>(Configuration);
             services.AddSwaggerGen();
+            services.AddControllersWithViews();
         }
 
         

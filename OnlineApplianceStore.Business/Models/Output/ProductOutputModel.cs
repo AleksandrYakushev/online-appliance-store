@@ -36,5 +36,6 @@ namespace OnlineApplianceStore.Business.Models.Output
         public bool GlassCase { get; set; }
         public bool RemoteController { get; set; }
         public bool WithBattery { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

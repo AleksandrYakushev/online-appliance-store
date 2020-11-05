@@ -4,5 +4,25 @@
         <name>OnlineApplianceStore.API</name>
     </assembly>
     <members>
+        <member name="M:OnlineApplianceStore.API.Controllers.ProductController.AddProduct(OnlineApplianceStore.Business.Models.Input.ProductInputModel)">
+             <summary>
+             Creates Product
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /deposit
+                 {
+                    "leadId": 1,
+                    "amount": 200,
+                    "currencyCode": "RUB"
+                 }
+            
+             </remarks>      
+             <returns> Created transaction Id</returns>
+             <response code="200">Returns created transaction Id</response>
+             <response code="422">If parameters weren't validated</response>
+             <response code="520">If problem occured</response>
+        </member>
     </members>
 </doc>

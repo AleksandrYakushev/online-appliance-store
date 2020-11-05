@@ -1,37 +1,88 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using OnlineApplianceStore.Business.Managers;
+using OnlineApplianceStore.Business.Models.Input;
 using OnlineApplianceStore.Business.Models.Output;
 
 namespace OnlineApplianceStore.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : Controller
+    public class ProductController : ControllerBase
     {
-        [HttpPost("product")]
-        public ActionResult<List<CustomerOutputModel>> PostProduct()
+        private IProductManager _productManager;
+
+        public ProductController(IProductManager productManager)
         {
-            return null;
+            _productManager = productManager;
+        }
+
+
+        /// <summary>
+        /// Creates Product
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /deposit
+        ///     {
+        ///        "leadId": 1,
+        ///        "amount": 200,
+        ///        "currencyCode": "RUB"
+        ///     }
+        ///
+        /// </remarks>      
+        /// <returns> Created transaction Id</returns>
+        /// <response code="200">Returns created transaction Id</response>
+        /// <response code="422">If parameters weren't validated</response>
+        /// <response code="520">If problem occured</response>
+        [HttpPost]
+        public ActionResult<List<ProductOutputModel>> AddProduct(ProductInputModel inputModel)
+        {
+            var result = _productManager.CreateProduct(inputModel);
+            if (result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
         [HttpGet("{id}")]
-        public ActionResult<CustomerOutputModel> GetProduct()
+        public ActionResult<ProductOutputModel> GetProduct(long id)
         {
-            return null;
+            var result = _productManager.GetProduct(id);
+            if (result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
         [HttpGet("all")]
-        public ActionResult<List<CustomerOutputModel>> GetAllProducts()
+        public ActionResult<List<ProductOutputModel>> GetAllProducts()
         {
-            return null;
+            var result = _productManager.GetAllProducts();
+            if (result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
         [HttpGet("Search")]
-        public ActionResult<List<CustomerOutputModel>> GetSearchResult()
+        public ActionResult<List<ProductOutputModel>> GetSearchResult()
         {
             return null;
         }

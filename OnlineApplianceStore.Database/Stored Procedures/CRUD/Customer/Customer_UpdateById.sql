@@ -8,9 +8,7 @@
 	@Password nvarchar(30),
 	@Address nvarchar(100),
 	@Email nvarchar(50),
-	@Birthday date,
-	@RegistrationDate datetime2,
-	@LastUpdateDate datetime2
+	@Birthday date
 AS
 	UPDATE dbo.Customer
 	SET
@@ -23,7 +21,6 @@ AS
 	[Address] = @Address, 
 	Email = @Email,
 	Birthday = @Birthday,
-	RegistrationDate = @RegistrationDate,
-	LastUpdateDate = @LastUpdateDate
+	LastUpdateDate = SYSDATETIME()
 
 	WHERE (Id = @Id)

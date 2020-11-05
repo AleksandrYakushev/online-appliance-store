@@ -7,4 +7,3 @@ C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\Onlin
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Database\obj\Debug\refactor.xml
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Database\obj\Debug\postdeploy.sql
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Database\obj\Debug\predeploy.sql
-C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Database\obj\Debug\OnlineApplianceStore.Database.sqlprojAssemblyReference.cache

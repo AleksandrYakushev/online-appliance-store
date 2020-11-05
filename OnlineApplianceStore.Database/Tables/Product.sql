@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Product] (
 	Id BIGINT PRIMARY KEY NOT NULL IDENTITY (1, 1),
-	[Name] NVARCHAR NOT NULL,
-	Price decimal NOT NULL,
+	[Name] NVARCHAR(50) NOT NULL,
+	Price DECIMAL NOT NULL,
 	[Length] FLOAT NOT NULL,
 	Width FLOAT NOT NULL,
 	Height FLOAT NOT NULL,
@@ -28,5 +28,6 @@
 	WetCleaning BIT,
 	GlassCase BIT,
 	RemoteController BIT,
-	WithBattery BIT
+	WithBattery BIT,
+	IsDeleted BIT DEFAULT '0' NOT NULL
 	)

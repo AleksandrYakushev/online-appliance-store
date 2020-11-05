@@ -17,83 +17,6 @@ namespace OnlineApplianceStore.Data.Repositories
             DbConnection = new SqlConnection(options.Value.ConnectionString);
         }
 
-        public DataWrapper<CustomerDto> SelectCustomerById(long customerId)
-        {
-            var data = new DataWrapper<CustomerDto>();
-            try
-            {
-                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto, CustomerDto>(
-                StoredProcedure.SelectCustomerProcedure,
-                (customer, role, city) =>
-                {
-                    customer.Role = role;
-                    customer.City = city;
-                    return customer;
-                },
-                new { customerId },
-                splitOn: "Id",
-                commandType: CommandType.StoredProcedure
-                ).SingleOrDefault();
-            }
-            catch (Exception ex)
-            {
-                data.ResultMessage = ex.Message;
-            }
-
-            return data;
-        }
-
-        public DataWrapper<CustomerDto> DeleteCustomerById(long id)
-        {
-            var data = new DataWrapper<CustomerDto>();
-            try
-            {
-                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto,  CustomerDto>(
-                    StoredProcedure.DeleteCustomerProcedure,
-                    (customer, role, city) =>
-                    {
-                        customer.Role = role;
-                        customer.City = city;
-                        return customer;
-                    },
-                    new { id },
-                    splitOn: "Id",
-                    commandType: CommandType.StoredProcedure
-                    ).SingleOrDefault();
-            }
-            catch (Exception ex)
-            {
-                data.ResultMessage = ex.Message;
-            }
-
-            return data;
-        }
-
-        public DataWrapper<List<CustomerDto>> SelectAllCustomers()
-        {
-            var data = new DataWrapper<List<CustomerDto>>();
-            try
-            {
-                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto,  CustomerDto>(
-                    StoredProcedure.SelectAllCustomersProcedure,
-                    (customer, role, city) =>
-                    {
-                        customer.Role = role;
-                        customer.City = city;
-                        return customer;
-                    },
-                    splitOn: "Id",
-                    commandType: CommandType.StoredProcedure
-                    ).ToList();
-            }
-            catch (Exception ex)
-            {
-                data.ResultMessage = ex.Message;
-            }
-
-            return data;
-        }
-
         public DataWrapper<CustomerDto> CreateCustomer(CustomerDto dto)
         {
             var data = new DataWrapper<CustomerDto>();
@@ -107,7 +30,8 @@ namespace OnlineApplianceStore.Data.Repositories
                         customer.City = city;
                         return customer;
                     },
-                    new {
+                    new
+                    {
                         CityId = dto.City.Id,
                         dto.Name,
                         dto.LastName,
@@ -125,7 +49,6 @@ namespace OnlineApplianceStore.Data.Repositories
             {
                 data.ResultMessage = ex.Message;
             }
-
             return data;
         }
 
@@ -161,7 +84,80 @@ namespace OnlineApplianceStore.Data.Repositories
             {
                 data.ResultMessage = ex.Message;
             }
+            return data;
+        }
 
+        public DataWrapper<CustomerDto> SelectCustomerById(long customerId)
+        {
+            var data = new DataWrapper<CustomerDto>();
+            try
+            {
+                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto, CustomerDto>(
+                StoredProcedure.SelectCustomerProcedure,
+                (customer, role, city) =>
+                {
+                    customer.Role = role;
+                    customer.City = city;
+                    return customer;
+                },
+                new { customerId },
+                splitOn: "Id",
+                commandType: CommandType.StoredProcedure
+                ).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                data.ResultMessage = ex.Message;
+            }
+            return data;
+        }
+
+        public DataWrapper<List<CustomerDto>> SelectAllCustomers()
+        {
+            var data = new DataWrapper<List<CustomerDto>>();
+            try
+            {
+                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto, CustomerDto>(
+                    StoredProcedure.SelectAllCustomersProcedure,
+                    (customer, role, city) =>
+                    {
+                        customer.Role = role;
+                        customer.City = city;
+                        return customer;
+                    },
+                    splitOn: "Id",
+                    commandType: CommandType.StoredProcedure
+                    ).ToList();
+            }
+            catch (Exception ex)
+            {
+                data.ResultMessage = ex.Message;
+            }
+            return data;
+        }
+
+        public DataWrapper<CustomerDto> DeleteCustomerById(long id)
+        {
+            var data = new DataWrapper<CustomerDto>();
+            try
+            {
+                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto,  CustomerDto>(
+                    StoredProcedure.DeleteCustomerProcedure,
+                    (customer, role, city) =>
+                    {
+                        customer.Role = role;
+                        customer.City = city;
+                        return customer;
+                    },
+                    new { id },
+                    splitOn: "Id",
+                    commandType: CommandType.StoredProcedure
+                    ).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                data.ResultMessage = ex.Message;
+            }
             return data;
         }
     }
