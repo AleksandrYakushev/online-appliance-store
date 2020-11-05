@@ -58,7 +58,9 @@
     <Folder Include="Properties" />
     <Folder Include="Stored Procedures" />
     <Folder Include="Tables" />
-    <Folder Include="Stored Procedures\Customer" />
+    <Folder Include="Stored Procedures\CRUD" />
+    <Folder Include="Stored Procedures\CRUD\Customer" />
+    <Folder Include="Stored Procedures\CRUD\Product" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Product.sql" />
@@ -68,13 +70,18 @@
     <Build Include="Tables\Order.sql" />
     <Build Include="Tables\OrderProduct.sql" />
     <Build Include="Tables\Storage.sql" />
-    <Build Include="Stored Procedures\Customer\Customer_DeleteById.sql" />
-    <Build Include="Stored Procedures\Customer\Customer_SelectById.sql" />
     <Build Include="Tables\City_1.sql" />
     <Build Include="Tables\PaymentType.sql" />
-    <Build Include="Stored Procedures\Customer\Customer_Create.sql" />
-    <Build Include="Stored Procedures\Customer\Customer_UpdateById.sql" />
-    <Build Include="Stored Procedures\Customer\Customer_SelectAll.sql" />
-    <Build Include="Stored Procedures\Customer\Customer_Merge.sql" />
+    <Build Include="Stored Procedures\CRUD\Customer\Customer_Create.sql" />
+    <Build Include="Stored Procedures\CRUD\Customer\Customer_DeleteById.sql" />
+    <Build Include="Stored Procedures\CRUD\Customer\Customer_Merge.sql" />
+    <Build Include="Stored Procedures\CRUD\Customer\Customer_SelectAll.sql" />
+    <Build Include="Stored Procedures\CRUD\Customer\Customer_SelectById.sql" />
+    <Build Include="Stored Procedures\CRUD\Customer\Customer_UpdateById.sql" />
+    <Build Include="Stored Procedures\CRUD\Product\Product_Create.sql" />
+    <Build Include="Stored Procedures\CRUD\Product\Product_UpdateById.sql" />
+    <Build Include="Stored Procedures\CRUD\Product\Product_DeleteById.sql" />
+    <Build Include="Stored Procedures\CRUD\Product\Product_SelectById.sql" />
+    <Build Include="Stored Procedures\CRUD\Product\Product_SelectAll.sql" />
   </ItemGroup>
 </Project>

@@ -20,7 +20,36 @@ namespace OnlineApplianceStore.API.Controllers
         {
             _customerManager = customerManager;
         }
-        
+
+        [HttpPost]
+        public ActionResult<List<CustomerOutputModel>> AddCustomer(CustomerInputModel inputModel)
+        {
+            var result = _customerManager.CreateCustomer(inputModel);
+            if (result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
+        }
+
+        [HttpPut]
+        public ActionResult<List<CustomerOutputModel>> UpdateCustomer(CustomerInputModel inputModel)
+        {
+            var result = _customerManager.UpdateCustomer(inputModel);
+            if (result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
+        }
 
         [HttpGet("{id}")]
         public ActionResult<CustomerOutputModel> GetCustomer(long id)
@@ -41,47 +70,6 @@ namespace OnlineApplianceStore.API.Controllers
         public ActionResult<List<CustomerOutputModel>> GetAllCustomers()
         {
             var result = _customerManager.GetAllCustomers();
-            if (result.IsOK)
-            {
-                if(result.Data == null)
-                {
-                    return NotFound();
-                }
-                return Ok(result.Data);
-            }
-
-            return Problem(detail: result.ResultMessage, statusCode: 520);
-
-        }
-
-        //example of valid data
-        //"name": "George",
-        //"lastName": "Ford",
-        //"birthday": "06.15.2008",
-        //"address": "address",
-        //"phone": "345678",
-        //"email": "email@gmail.com",
-        //"password": "password",
-        //"cityid": 1
-        [HttpPost]
-        public ActionResult<List<CustomerOutputModel>> AddCustomer(CustomerInputModel inputModel)
-        {
-            var result = _customerManager.CreateCustomer(inputModel);
-            if(result.IsOK)
-            {
-                if (result.Data == null)
-                {
-                    return NotFound();
-                }
-                return Ok(result.Data);
-            }
-            return Problem(detail: result.ResultMessage, statusCode: 520);
-        }
-
-        [HttpPut]
-        public ActionResult<List<CustomerOutputModel>> UpdateCustomer(CustomerInputModel inputModel)
-        {
-            var result = _customerManager.UpdateCustomer(inputModel);
             if (result.IsOK)
             {
                 if(result.Data == null)

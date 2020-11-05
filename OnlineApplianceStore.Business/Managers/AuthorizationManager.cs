@@ -1,10 +1,6 @@
 ﻿using AutoMapper;
-using OnlineApplianceStore.Business.Models.Mappings;
 using OnlineApplianceStore.Business.Models.Output;
 using OnlineApplianceStore.Data.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CRM.Business.Managers
 {

@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using OnlineApplianceStore.Business.Managers;
-using OnlineApplianceStore.Business.Models.Mappings;
 using OnlineApplianceStore.Data.Repositories;
 
 namespace OnlineApplianceStore.API.Configuration
@@ -10,9 +9,11 @@ namespace OnlineApplianceStore.API.Configuration
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<CustomerRepository>().As<ICustomerRepository>().SingleInstance();
+            builder.RegisterType<ProductRepository>().As<IProductRepository>().SingleInstance();
             //builder.RegisterType<AuthorizationManager>().SingleInstance();
             builder.RegisterType<CustomerManager>().As<ICustomerManager>().SingleInstance();
-            
+            builder.RegisterType<ProductManager>().As<IProductManager>().SingleInstance();
+
             //builder.RegisterType<TokenService>().SingleInstance();
         }
     }
