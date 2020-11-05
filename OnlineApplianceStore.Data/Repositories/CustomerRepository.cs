@@ -4,9 +4,7 @@ using OnlineApplianceStore.Data.DTO;
 using Dapper;
 using System;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Data.SqlClient;
-using System.Text;
 using System.Data;
 using System.Linq;
 
@@ -84,7 +82,7 @@ namespace OnlineApplianceStore.Data.Repositories
                         customer.City = city;
                         return customer;
                     },
-                    splitOn: "C.Id",
+                    splitOn: "Id",
                     commandType: CommandType.StoredProcedure
                     ).ToList();
             }

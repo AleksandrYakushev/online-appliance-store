@@ -12,7 +12,7 @@ namespace OnlineApplianceStore.API.Configuration
             builder.RegisterType<CustomerRepository>().As<ICustomerRepository>().SingleInstance();
             //builder.RegisterType<AuthorizationManager>().SingleInstance();
             builder.RegisterType<CustomerManager>().As<ICustomerManager>().SingleInstance();
-            builder.RegisterType<CustomerMapper>();
+            
             //builder.RegisterType<TokenService>().SingleInstance();
         }
     }
