@@ -9,14 +9,9 @@ namespace OnlineApplianceStore.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OrderController : Controller
+    public class OrderController : ControllerBase
     {
-        [HttpGet("{id}")]
-        public ActionResult<List<OrderOutputModel>> GetOrder()
-        {
-            return null;
-        }
-
+        
         [HttpPost]
         public ActionResult<List<OrderOutputModel>> AddOrder()
         {
@@ -25,6 +20,18 @@ namespace OnlineApplianceStore.API.Controllers
 
         [HttpPut]
         public ActionResult<List<OrderOutputModel>> UpdateOrder()
+        {
+            return null;
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<List<OrderOutputModel>> GetOrder()
+        {
+            return null;
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<List<OrderOutputModel>> GetAllOrders()
         {
             return null;
         }
