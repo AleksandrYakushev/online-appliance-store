@@ -5,4 +5,5 @@
 	OperationDate DATETIME2 NOT NULL,
 	PaymentTypeId INT FOREIGN KEY (PaymentTypeId) REFERENCES [dbo].[PaymentType]([Id]) NOT NULL,
 	TotalAmount DECIMAL NOT NULL,
+	IsDeleted BIT DEFAULT '0' NOT NULL
 )

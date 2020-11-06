@@ -61,6 +61,7 @@
     <Folder Include="Stored Procedures\CRUD" />
     <Folder Include="Stored Procedures\CRUD\Customer" />
     <Folder Include="Stored Procedures\CRUD\Product" />
+    <Folder Include="Stored Procedures\CRUD\Order" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Product.sql" />
@@ -83,5 +84,9 @@
     <Build Include="Stored Procedures\CRUD\Product\Product_DeleteById.sql" />
     <Build Include="Stored Procedures\CRUD\Product\Product_SelectById.sql" />
     <Build Include="Stored Procedures\CRUD\Product\Product_SelectAll.sql" />
+    <Build Include="Stored Procedures\CRUD\Order\Order_SelectAll.sql" />
+    <Build Include="Stored Procedures\CRUD\Order\Order_SelectById.sql" />
+    <Build Include="Stored Procedures\CRUD\Order\Order_Merge.sql" />
+    <Build Include="Stored Procedures\CRUD\Order\Order_DeleteById.sql" />
   </ItemGroup>
 </Project>

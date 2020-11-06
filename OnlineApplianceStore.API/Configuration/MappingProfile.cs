@@ -17,7 +17,6 @@ namespace OnlineApplianceStore.API.Configuration
             CreateMap<CustomerInputModel, CustomerDto>()
                 .ForPath(dest => dest.City, o => o.MapFrom(src => new CityDto() { Id = src.CityId }))
                 .ForPath(dest => dest.Birthday, o => o.MapFrom(src => DateTime.ParseExact(src.Birthday, _shortDateFormat, CultureInfo.InvariantCulture)));
-                //.ForPath(dest => dest.Password, o => o.MapFrom(src => BCryptHashing.HashPassword(src.Password)))
 
             CreateMap<CustomerDto, CustomerOutputModel>()
                 .ForPath(dest => dest.Birthday, o => o.MapFrom(src => src.Birthday.ToString(_shortDateFormat)))

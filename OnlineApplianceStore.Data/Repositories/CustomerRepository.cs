@@ -67,6 +67,7 @@ namespace OnlineApplianceStore.Data.Repositories
                     },
                     new
                     {
+                        dto.Id,
                         CityId = dto.City.Id,
                         dto.Name,
                         dto.LastName,
