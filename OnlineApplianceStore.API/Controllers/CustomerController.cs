@@ -22,7 +22,7 @@ namespace OnlineApplianceStore.API.Controllers
         }
 
         [HttpPost]
-        public ActionResult<List<CustomerOutputModel>> AddCustomer(CustomerInputModel inputModel)
+        public ActionResult<CustomerOutputModel> AddCustomer(CustomerInputModel inputModel)
         {
             var result = _customerManager.CreateCustomer(inputModel);
             if (result.IsOK)
@@ -37,9 +37,9 @@ namespace OnlineApplianceStore.API.Controllers
         }
 
         [HttpPut]
-        public ActionResult<List<CustomerOutputModel>> UpdateCustomer(CustomerInputModel inputModel)
+        public ActionResult<CustomerOutputModel> UpdateCustomer(CustomerInputModel inputModel)
         {
-            var result = _customerManager.UpdateCustomer(inputModel);
+            var result = _customerManager.Merge(inputModel);
             if (result.IsOK)
             {
                 if (result.Data == null)

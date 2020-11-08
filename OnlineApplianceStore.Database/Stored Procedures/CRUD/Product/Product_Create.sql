@@ -32,7 +32,7 @@ AS
 	Begin
 	INSERT INTO dbo.Product(Name, Price, Length, Width, Height, Weight, Manufacturer, ProductionYear, MaxPower, NumberOfPrograms, Color,
 	BowlVolume, ProductShape, ProductLife, NoiseLevel, MinTemperature, NumberOfToasts, BatteryLife, PowerRegulator, Timer,
-	Defrost, SuperFrost, Backlight, Display, CarboneFilter, WetCleaning, GlassCase, RemoteController, WithBattery, IsDeleted)
+	Defrost, SuperFrost, Backlight, Display, CarboneFilter, WetCleaning, GlassCase, RemoteController, WithBattery)
 	VALUES (@Name, @Price, @Length, @Width, @Height, @Weight, @Manufacturer, @ProductionYear, @MaxPower, @NumberOfPrograms, @Color,
 	@BowlVolume, @ProductShape, @ProductLife, @NoiseLevel, @MinTemperature, @NumberOfToasts, @BatteryLife, @PowerRegulator, @Timer,
 	@Defrost, @SuperFrost, @Backlight, @Display, @CarboneFilter, @WetCleaning, @GlassCase, @RemoteController, @WithBattery)

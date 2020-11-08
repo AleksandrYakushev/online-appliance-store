@@ -16,7 +16,9 @@ namespace OnlineApplianceStore.API.Configuration
         {
             CreateMap<CustomerInputModel, CustomerDto>()
                 .ForPath(dest => dest.City, o => o.MapFrom(src => new CityDto() { Id = src.CityId }))
+                .ForPath(dest => dest.Role, o => o.MapFrom(src => new RoleDto() { Id = src.RoleId }))
                 .ForPath(dest => dest.Birthday, o => o.MapFrom(src => DateTime.ParseExact(src.Birthday, _shortDateFormat, CultureInfo.InvariantCulture)));
+                
 
             CreateMap<CustomerDto, CustomerOutputModel>()
                 .ForPath(dest => dest.Birthday, o => o.MapFrom(src => src.Birthday.ToString(_shortDateFormat)))
@@ -26,9 +28,11 @@ namespace OnlineApplianceStore.API.Configuration
             CreateMap<ProductDto, ProductOutputModel>()
                 .ForPath(dest => dest.ProductionYear, o => o.MapFrom(src => DateTime.Now));
 
-            CreateMap<ProductInputModel, ProductDto>();
+            CreateMap<ProductInputModel, ProductDto>()
+                .ForPath(dest => dest.ProductionYear, o => o.MapFrom(src => DateTime.ParseExact(src.ProductionYear, _shortDateFormat, CultureInfo.InvariantCulture)));
 
-            CreateMap<ProductDto, ProductOutputModel>();
+            CreateMap<ProductDto, ProductOutputModel>()
+                .ForPath(dest => dest.ProductionYear, o => o.MapFrom(src => src.ProductionYear.ToString(_shortDateFormat)));
         }
     }
 }

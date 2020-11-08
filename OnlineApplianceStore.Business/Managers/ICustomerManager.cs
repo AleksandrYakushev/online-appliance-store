@@ -7,10 +7,10 @@ namespace OnlineApplianceStore.Business.Managers
 {
     public interface ICustomerManager
     {
-        DataWrapper<CustomerOutputModel> DeleteCustomer(long id);
-        DataWrapper<List<CustomerOutputModel>> GetAllCustomers();
-        DataWrapper<CustomerOutputModel> GetCustomer(long id);
+        public DataWrapper<CustomerOutputModel> Merge(CustomerInputModel inputModel);
         DataWrapper<CustomerOutputModel> CreateCustomer(CustomerInputModel inputModel);
-        DataWrapper<CustomerOutputModel> UpdateCustomer(CustomerInputModel inputModel);
+        DataWrapper<CustomerOutputModel> GetCustomer(long id);
+        DataWrapper<List<CustomerOutputModel>> GetAllCustomers();
+        DataWrapper<CustomerOutputModel> DeleteCustomer(long id);
     }
 }

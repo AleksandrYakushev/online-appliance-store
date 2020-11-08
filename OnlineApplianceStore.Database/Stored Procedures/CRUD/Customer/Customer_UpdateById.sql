@@ -10,10 +10,11 @@
 	@Email nvarchar(50),
 	@Birthday date
 AS
+	begin
 	UPDATE dbo.Customer
 	SET
-	RoleId = @RoleId,
 	CityId = @CityId,
+	RoleId = @RoleId,
 	[Name] = @Name,
 	LastName = @LastName,
 	Phone = @Phone,
@@ -24,3 +25,9 @@ AS
 	LastUpdateDate = SYSDATETIME()
 
 	WHERE (Id = @Id)
+
+	DECLARE @CustomrerId bigint
+	SET @CustomrerId = SCOPE_IdENTITY()
+	exec [dbo].[Customer_SelectById] @CustomrerId
+	END
+

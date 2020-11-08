@@ -1877,6 +1877,10 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
           "Autofac": "6.0.0",
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "Autofac.Mvc5": "6.0.0",
+          "Dapper": "2.0.35",
+          "Microsoft.IdentityModel.Tokens": "6.8.0",
           "OnlineApplianceStore.Data": "1.0.0"
         },
         "compile": {
@@ -1892,7 +1896,10 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
           "Autofac": "6.0.0",
-          "Dapper": "2.0.35"
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "Autofac.Mvc5": "6.0.0",
+          "Dapper": "2.0.35",
+          "Microsoft.IdentityModel.Tokens": "6.8.0"
         },
         "compile": {
           "bin/placeholder/OnlineApplianceStore.Core.dll": {}
@@ -1907,8 +1914,11 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
           "Autofac": "6.0.0",
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
           "Autofac.Mvc5": "6.0.0",
+          "Dapper": "2.0.35",
           "Microsoft.Extensions.Options": "3.1.9",
+          "Microsoft.IdentityModel.Tokens": "6.8.0",
           "OnlineApplianceStore.Core": "1.0.0",
           "System.Data.SqlClient": "4.8.2"
         },
@@ -6621,6 +6631,8 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.0",
       "Autofac >= 6.0.0",
       "Autofac.Extensions.DependencyInjection >= 7.1.0",
+      "Autofac.Mvc5 >= 6.0.0",
+      "Dapper >= 2.0.35",
       "Microsoft.AspNet.WebApi.Client >= 5.2.7",
       "Microsoft.AspNetCore.StaticFiles >= 2.2.0",
       "Microsoft.IdentityModel.Tokens >= 6.8.0",
@@ -6680,6 +6692,14 @@
           "Autofac.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[7.1.0, )"
+          },
+          "Autofac.Mvc5": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.0.35, )"
           },
           "Microsoft.AspNet.WebApi.Client": {
             "target": "Package",

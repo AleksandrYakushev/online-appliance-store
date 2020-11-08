@@ -30,7 +30,7 @@ namespace OnlineApplianceStore.API.Controllers
             return null;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
         public ActionResult<List<OrderOutputModel>> GetAllOrders()
         {
             return null;

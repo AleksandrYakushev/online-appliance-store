@@ -33,10 +33,10 @@ namespace OnlineApplianceStore.Business.Managers
             };
         }
 
-        public DataWrapper<CustomerOutputModel> UpdateCustomer(CustomerInputModel inputModel)
+        public DataWrapper<CustomerOutputModel> Merge(CustomerInputModel inputModel)
         {
             var customerDto = _mapper.Map<CustomerDto>(inputModel);
-            var data = _customerRepository.UpdateCustomer(customerDto);
+            var data = _customerRepository.MergeCustomer(customerDto);
             var mappedData = _mapper.Map<CustomerOutputModel>(data.Data);
             return new DataWrapper<CustomerOutputModel>
             {

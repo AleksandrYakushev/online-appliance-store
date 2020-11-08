@@ -12,7 +12,7 @@ namespace OnlineApplianceStore.Business.Managers
         DataWrapper<ProductOutputModel> DeleteProduct(long id);
         DataWrapper<List<ProductOutputModel>> GetAllProducts();
         DataWrapper<ProductOutputModel> GetProduct(long id);
-        DataWrapper<ProductOutputModel> CreateProduct(ProductInputModel inputModel);
+        DataWrapper<ProductOutputModel> Merge(ProductInputModel inputModel);
         DataWrapper<ProductOutputModel> UpdateProduct(ProductInputModel inputModel);
     }
 }

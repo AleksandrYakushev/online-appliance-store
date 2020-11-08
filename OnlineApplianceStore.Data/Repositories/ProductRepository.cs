@@ -19,15 +19,16 @@ namespace OnlineApplianceStore.Data.Repositories
             DbConnection = new SqlConnection(options.Value.ConnectionString);
         }
 
-        public DataWrapper<ProductDto> CreateProduct(ProductDto dto)
+        public DataWrapper<ProductDto> MergeProduct(ProductDto dto)
         {
             var data = new DataWrapper<ProductDto>();
             try
             {
                 data.Data = DbConnection.Query<ProductDto>(
-                    StoredProcedure.CreateProductProcedure,
+                    StoredProcedure.MergeProductProcedure,
                     new
                     {
+                        dto.Id,
                         dto.Name,
                         dto.Price,
                         dto.Length,
