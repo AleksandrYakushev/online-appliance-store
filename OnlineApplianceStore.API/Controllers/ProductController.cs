@@ -79,6 +79,21 @@ namespace OnlineApplianceStore.API.Controllers
             return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
+        [HttpDelete("{id}")]
+        public ActionResult<ProductOutputModel> DeleteProduct(long id)
+        {
+            var result = _productManager.DeleteProduct(id);
+            if (result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
+        }
+
         [HttpGet("Search")]
         public ActionResult<List<ProductOutputModel>> GetSearchResult()
         {
