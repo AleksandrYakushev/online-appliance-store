@@ -17,41 +17,6 @@ namespace OnlineApplianceStore.Data.Repositories
             DbConnection = new SqlConnection(options.Value.ConnectionString);
         }
 
-        public DataWrapper<CustomerDto> CreateCustomer(CustomerDto dto)
-        {
-            var data = new DataWrapper<CustomerDto>();
-            try
-            {
-                data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto, CustomerDto>(
-                    StoredProcedure.CreateCustomerProcedure,
-                    (customer, role, city) =>
-                    {
-                        customer.Role = role;
-                        customer.City = city;
-                        return customer;
-                    },
-                    new
-                    {
-                        CityId = dto.City.Id,
-                        dto.Name,
-                        dto.LastName,
-                        dto.Birthday,
-                        dto.Address,
-                        dto.Phone,
-                        dto.Email,
-                        dto.Password
-                    },
-                    splitOn: "Id",
-                    commandType: CommandType.StoredProcedure
-                    ).SingleOrDefault();
-            }
-            catch (Exception ex)
-            {
-                data.ResultMessage = ex.Message;
-            }
-            return data;
-        }
-
         public DataWrapper<CustomerDto> MergeCustomer(CustomerDto dto)
         {
             var data = new DataWrapper<CustomerDto>();
