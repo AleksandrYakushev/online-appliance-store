@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DJB3Ncn0qQ2yPJBvoDAcNYAZglivk5Bydb+sybDHnPzxkDUgBrILWEIFDVRKP8DBFCVLapiRKH42d8ZxA8141A==",
+  "dgSpecHash": "9GenhefaZ2QyWm8gHaeEQKG2Mxz+flFoN0kuHkUcoSV4FcSTvDerjIgyW1P0POzjupJyuRCiuofVecEHKk/UMQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Саша\\Desktop\\Repo\\OnlineApplianceStore\\online-appliance-store\\OnlineApplianceStore.API\\OnlineApplianceStore.API.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Саша\\.nuget\\packages\\autofac.mvc5\\6.0.0\\autofac.mvc5.6.0.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\Саша\\.nuget\\packages\\bcrypt.net-next\\4.0.0\\bcrypt.net-next.4.0.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",

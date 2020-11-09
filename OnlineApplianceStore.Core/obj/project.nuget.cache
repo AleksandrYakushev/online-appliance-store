@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VnllzOON9JGMcwRtKkZ5ZAxTVSKzkX2yRRvZynztpOhn789IhP5QOYJKiGibKTk6VhhBZamD/alqrAo/Bhht3Q==",
+  "dgSpecHash": "zIuNfwml/3etBUMb7HNGPnd75UDMVVJ/lXsE5aRAiOb+RE4iumcIwU0G0ug3iSZW5KHmeix6XlxgKxH3tV+kww==",
   "success": true,
   "projectFilePath": "C:\\Users\\Саша\\Desktop\\Repo\\OnlineApplianceStore\\online-appliance-store\\OnlineApplianceStore.Core\\OnlineApplianceStore.Core.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Саша\\.nuget\\packages\\autofac.mvc5\\6.0.0\\autofac.mvc5.6.0.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\Саша\\.nuget\\packages\\bcrypt.net-next\\4.0.0\\bcrypt.net-next.4.0.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.0\\microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
