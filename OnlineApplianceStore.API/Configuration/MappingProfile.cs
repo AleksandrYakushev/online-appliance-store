@@ -18,15 +18,11 @@ namespace OnlineApplianceStore.API.Configuration
                 .ForPath(dest => dest.City, o => o.MapFrom(src => new CityDto() { Id = src.CityId }))
                 .ForPath(dest => dest.Role, o => o.MapFrom(src => new RoleDto() { Id = src.RoleId }))
                 .ForPath(dest => dest.Birthday, o => o.MapFrom(src => DateTime.ParseExact(src.Birthday, _shortDateFormat, CultureInfo.InvariantCulture)));
-                
 
             CreateMap<CustomerDto, CustomerOutputModel>()
                 .ForPath(dest => dest.Birthday, o => o.MapFrom(src => src.Birthday.ToString(_shortDateFormat)))
                 .ForPath(dest => dest.RegistrationDate, o => o.MapFrom(src => src.RegistrationDate.ToString(_longDateFormat)))
                 .ForPath(dest => dest.LastUpdateDate, o => o.MapFrom(src => src.LastUpdateDate.ToString(_longDateFormat)));
-
-            CreateMap<ProductDto, ProductOutputModel>()
-                .ForPath(dest => dest.ProductionYear, o => o.MapFrom(src => DateTime.Now));
 
             CreateMap<ProductInputModel, ProductDto>()
                 .ForPath(dest => dest.ProductionYear, o => o.MapFrom(src => DateTime.ParseExact(src.ProductionYear, _shortDateFormat, CultureInfo.InvariantCulture)));

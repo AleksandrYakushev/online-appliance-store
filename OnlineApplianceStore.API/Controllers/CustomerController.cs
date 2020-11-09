@@ -24,7 +24,7 @@ namespace OnlineApplianceStore.API.Controllers
         [HttpPost]
         public ActionResult<CustomerOutputModel> AddCustomer(CustomerInputModel inputModel)
         {
-            var result = _customerManager.CreateCustomer(inputModel);
+            var result = _customerManager.Merge(inputModel);
             if (result.IsOK)
             {
                 if (result.Data == null)

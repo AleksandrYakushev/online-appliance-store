@@ -4,9 +4,7 @@ using OnlineApplianceStore.Business.Models.Output;
 using OnlineApplianceStore.Data;
 using OnlineApplianceStore.Data.DTO;
 using OnlineApplianceStore.Data.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace OnlineApplianceStore.Business.Managers
 {
@@ -19,18 +17,6 @@ namespace OnlineApplianceStore.Business.Managers
         {
             _customerRepository = customerRepository;
             _mapper = mapper;
-        }
-
-        public DataWrapper<CustomerOutputModel> CreateCustomer(CustomerInputModel inputModel)
-        {
-            var customerDto = _mapper.Map<CustomerDto>(inputModel);
-            var data = _customerRepository.CreateCustomer(customerDto);
-            var mappedData = _mapper.Map<CustomerOutputModel>(data.Data);
-            return new DataWrapper<CustomerOutputModel>
-            {
-                Data = mappedData,
-                ResultMessage = data.ResultMessage
-            };
         }
 
         public DataWrapper<CustomerOutputModel> Merge(CustomerInputModel inputModel)

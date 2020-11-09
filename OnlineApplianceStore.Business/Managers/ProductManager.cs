@@ -31,9 +31,9 @@ namespace OnlineApplianceStore.Business.Managers
             };
         }
 
-        public DataWrapper<ProductOutputModel> DeleteProduct(long id)
+        public DataWrapper<ProductOutputModel> GetProduct(long id)
         {
-            var data = _productRepository.DeleteProductById(id);
+            var data = _productRepository.SelectProductById(id);
             var mappedData = _mapper.Map<ProductDto, ProductOutputModel>(data.Data);
             return new DataWrapper<ProductOutputModel>
             {
@@ -53,9 +53,9 @@ namespace OnlineApplianceStore.Business.Managers
             };
         }
 
-        public DataWrapper<ProductOutputModel> GetProduct(long id)
+        public DataWrapper<ProductOutputModel> DeleteProduct(long id)
         {
-            var data = _productRepository.SelectProductById(id);
+            var data = _productRepository.DeleteProductById(id);
             var mappedData = _mapper.Map<ProductDto, ProductOutputModel>(data.Data);
             return new DataWrapper<ProductOutputModel>
             {
@@ -64,16 +64,5 @@ namespace OnlineApplianceStore.Business.Managers
             };
         }
 
-        public DataWrapper<ProductOutputModel> UpdateProduct(ProductInputModel inputModel)
-        {
-            var productDto = _mapper.Map<ProductInputModel, ProductDto>(inputModel);
-            var data = _productRepository.UpdateProduct(productDto);
-            var mappedData = _mapper.Map<ProductDto, ProductOutputModel>(data.Data);
-            return new DataWrapper<ProductOutputModel>
-            {
-                Data = mappedData,
-                ResultMessage = data.ResultMessage
-            };
-        }
     }
 }
