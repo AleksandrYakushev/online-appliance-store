@@ -88,5 +88,6 @@
     <Build Include="Stored Procedures\CRUD\Order\Order_SelectById.sql" />
     <Build Include="Stored Procedures\CRUD\Order\Order_Merge.sql" />
     <Build Include="Stored Procedures\CRUD\Order\Order_DeleteById.sql" />
+    <Build Include="Stored Procedures\CRUD\Product\Product_Merge.sql" />
   </ItemGroup>
 </Project>

@@ -19,10 +19,10 @@ namespace OnlineApplianceStore.Business.Managers
             _mapper = mapper;
         }
 
-        public DataWrapper<ProductOutputModel> CreateProduct(ProductInputModel inputModel)
+        public DataWrapper<ProductOutputModel> Merge(ProductInputModel inputModel)
         {
             var productDto = _mapper.Map<ProductInputModel, ProductDto>(inputModel);
-            var data = _productRepository.CreateProduct(productDto);
+            var data = _productRepository.MergeProduct(productDto);
             var mappedData = _mapper.Map<ProductDto, ProductOutputModel>(data.Data);
             return new DataWrapper<ProductOutputModel>
             {

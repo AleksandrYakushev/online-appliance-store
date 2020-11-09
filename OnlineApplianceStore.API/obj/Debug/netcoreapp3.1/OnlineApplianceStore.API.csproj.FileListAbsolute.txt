@@ -50,6 +50,3 @@ C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\Onlin
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\bin\Debug\netcoreapp3.1\Autofac.Integration.Mvc.dll
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\obj\Debug\netcoreapp3.1\OnlineApplianceStore.API.csproj.CoreCompileInputs.cache
-C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\obj\Debug\netcoreapp3.1\OnlineApplianceStore.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.API\obj\Debug\netcoreapp3.1\OnlineApplianceStore.API.MvcApplicationPartsAssemblyInfo.cache

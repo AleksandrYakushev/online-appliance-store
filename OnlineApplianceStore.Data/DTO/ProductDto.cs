@@ -14,7 +14,7 @@ namespace OnlineApplianceStore.Data.DTO
     public float Height { get; set; }
     public float Weight { get; set; }
     public string Manufacturer { get; set; }
-    public string ProductionYear { get; set; }
+    public DateTime ProductionYear { get; set; }
     public float MaxPower { get; set; }
     public int NumberOfPrograms { get; set; }
     public string Color { get; set; }

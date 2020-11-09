@@ -3,6 +3,7 @@ C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\Onlin
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Database\obj\Debug\OnlineApplianceStore.Database.pdb
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Database\bin\Debug\OnlineApplianceStore.Database.dll
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Database\bin\Debug\OnlineApplianceStore.Database.pdb
+C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Database\obj\Debug\OnlineApplianceStore.Database.sqlprojAssemblyReference.cache
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Database\obj\Debug\Model.xml
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Database\obj\Debug\refactor.xml
 C:\Users\Саша\Desktop\Repo\OnlineApplianceStore\online-appliance-store\OnlineApplianceStore.Database\obj\Debug\postdeploy.sql

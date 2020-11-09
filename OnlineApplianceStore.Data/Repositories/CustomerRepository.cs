@@ -52,7 +52,7 @@ namespace OnlineApplianceStore.Data.Repositories
             return data;
         }
 
-        public DataWrapper<CustomerDto> UpdateCustomer(CustomerDto dto)
+        public DataWrapper<CustomerDto> MergeCustomer(CustomerDto dto)
         {
             var data = new DataWrapper<CustomerDto>();
             try
@@ -69,6 +69,7 @@ namespace OnlineApplianceStore.Data.Repositories
                     {
                         dto.Id,
                         CityId = dto.City.Id,
+                        RoleId = dto.Role.Id,
                         dto.Name,
                         dto.LastName,
                         dto.Birthday,
