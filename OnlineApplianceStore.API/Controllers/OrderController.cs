@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OnlineApplianceStore.Business.Managers;
+using OnlineApplianceStore.Business.Models.Input;
 using OnlineApplianceStore.Business.Models.Output;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace OnlineApplianceStore.API.Controllers
 {
@@ -11,35 +10,86 @@ namespace OnlineApplianceStore.API.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        
-        [HttpPost]
-        public ActionResult<List<OrderOutputModel>> AddOrder()
+        private IOrderManager _orderManager;
+
+        public OrderController(IOrderManager orderManager)
         {
-            return null;
+            _orderManager = orderManager;
+        }
+
+        [HttpPost]
+        public ActionResult<OrderOutputModel> AddOrder(OrderInputModel inputModel)
+        {
+            var result = _orderManager.Merge(inputModel);
+            if (result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
         [HttpPut]
-        public ActionResult<List<OrderOutputModel>> UpdateOrder()
+        public ActionResult<OrderOutputModel> UpdateOrder(OrderInputModel inputModel)
         {
-            return null;
+            var result = _orderManager.Merge(inputModel);
+            if (result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
         [HttpGet("{id}")]
-        public ActionResult<List<OrderOutputModel>> GetOrder()
+        public ActionResult<OrderOutputModel> GetOrder(long id)
         {
-            return null;
+            var result = _orderManager.GetOrderById(id);
+            if (result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
-        [HttpGet]
+        [HttpGet("all")]
         public ActionResult<List<OrderOutputModel>> GetAllOrders()
         {
-            return null;
+            var result = _orderManager.GetAllOrders();
+            if (result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
         [HttpDelete("{id}")]
-        public ActionResult<List<OrderOutputModel>> DeleteOrder()
+        public ActionResult<List<OrderOutputModel>> DeleteOrder(long id)
         {
-            return null;
+            var result = _orderManager.DeleteOrderById(id);
+            if (result.IsOK)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result.Data);
+            }
+            return Problem(detail: result.ResultMessage, statusCode: 520);
         }
 
         [HttpGet("Search")]

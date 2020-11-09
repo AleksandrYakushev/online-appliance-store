@@ -23,7 +23,7 @@ namespace OnlineApplianceStore.Data.Repositories
             try
             {
                 data.Data = DbConnection.Query<CustomerDto, RoleDto, CityDto, CustomerDto>(
-                    StoredProcedure.UpdateCustomerProcedure,
+                    StoredProcedure.MergeCustomerProcedure,
                     (customer, role, city) =>
                     {
                         customer.Role = role;

@@ -6,9 +6,8 @@ namespace OnlineApplianceStore.Data.Repositories
     public interface IProductRepository
     {
         DataWrapper<ProductDto> MergeProduct(ProductDto dto);
-        DataWrapper<ProductDto> DeleteProductById(long id);
         DataWrapper<List<ProductDto>> SelectAllProducts();
         DataWrapper<ProductDto> SelectProductById(long customerId);
-        DataWrapper<ProductDto> UpdateProduct(ProductDto dto);
+        DataWrapper<ProductDto> DeleteProductById(long id);
     }
 }

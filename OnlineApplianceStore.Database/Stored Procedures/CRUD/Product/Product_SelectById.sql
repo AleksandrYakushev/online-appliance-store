@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[Product_SelectById]
-	@Id BIGINT
+	@ProductId BIGINT
 AS
 	SELECT 
 	P.Id, P.Name, P.Price, P.Length, P.Width, P.Height, P.Weight, P.Manufacturer, P.ProductionYear, P.MaxPower, P.NumberOfPrograms, P.Color,
@@ -7,4 +7,4 @@ AS
 	P.Defrost, P.SuperFrost, P.Backlight, P.Display, P.CarboneFilter, P.WetCleaning, P.GlassCase, P.RemoteController, P.WithBattery, P.IsDeleted
 	FROM [dbo].[Product] as P
 	
-	WHERE (Id = @Id AND IsDeleted = 0)
+	WHERE (@ProductId = P.Id AND IsDeleted = 0)

@@ -12,6 +12,7 @@
           "Autofac": "6.0.0",
           "Autofac.Extensions.DependencyInjection": "7.1.0",
           "Autofac.Mvc5": "6.0.0",
+          "BCrypt.Net-Next": "4.0.0",
           "Dapper": "2.0.35",
           "Microsoft.IdentityModel.Tokens": "6.8.0",
           "OnlineApplianceStore.Data": "1.0.0"
@@ -73,6 +74,14 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.1.0.0"
+          }
+        }
+      },
+      "BCrypt.Net-Next/4.0.0": {
+        "runtime": {
+          "lib/netstandard2.1/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
           }
         }
       },
@@ -229,6 +238,7 @@
           "Autofac": "6.0.0",
           "Autofac.Extensions.DependencyInjection": "7.1.0",
           "Autofac.Mvc5": "6.0.0",
+          "BCrypt.Net-Next": "4.0.0",
           "Dapper": "2.0.35",
           "Microsoft.IdentityModel.Tokens": "6.8.0"
         },
@@ -242,6 +252,7 @@
           "Autofac": "6.0.0",
           "Autofac.Extensions.DependencyInjection": "7.1.0",
           "Autofac.Mvc5": "6.0.0",
+          "BCrypt.Net-Next": "4.0.0",
           "Dapper": "2.0.35",
           "Microsoft.Extensions.Options": "3.1.9",
           "Microsoft.IdentityModel.Tokens": "6.8.0",
@@ -294,6 +305,13 @@
       "sha512": "sha512-dQyGCAYcHbGuimVvCMu4Ea2S1oYOlgO9XfVdClmY5wgygJMZoS57emPzH0qNfknmtzMm4QbDO9i237W5IDjU1A==",
       "path": "automapper.extensions.microsoft.dependencyinjection/8.1.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512"
+    },
+    "BCrypt.Net-Next/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1rjyVK+/YJnCElALjVNt/aUPIIRoFocFZzblsiFo2giA3WVYExk/E5UT6i4RqEHwIwEwoQHt02I1llaEIQ59eQ==",
+      "path": "bcrypt.net-next/4.0.0",
+      "hashPath": "bcrypt.net-next.4.0.0.nupkg.sha512"
     },
     "Dapper/2.0.35": {
       "type": "package",
