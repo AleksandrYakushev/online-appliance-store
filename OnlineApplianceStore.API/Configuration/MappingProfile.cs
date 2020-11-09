@@ -29,6 +29,10 @@ namespace OnlineApplianceStore.API.Configuration
 
             CreateMap<ProductDto, ProductOutputModel>()
                 .ForPath(dest => dest.ProductionYear, o => o.MapFrom(src => src.ProductionYear.ToString(_shortDateFormat)));
+
+
+            CreateMap<OrderDto, OrderOutputModel>()
+                .ForPath(src => src.OperationDate, o => o.MapFrom(src => src.OperationDate.ToString(_longDateFormat)));
         }
     }
 }

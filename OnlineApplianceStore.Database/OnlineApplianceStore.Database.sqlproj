@@ -73,14 +73,10 @@
     <Build Include="Tables\Storage.sql" />
     <Build Include="Tables\City_1.sql" />
     <Build Include="Tables\PaymentType.sql" />
-    <Build Include="Stored Procedures\CRUD\Customer\Customer_Create.sql" />
     <Build Include="Stored Procedures\CRUD\Customer\Customer_DeleteById.sql" />
     <Build Include="Stored Procedures\CRUD\Customer\Customer_Merge.sql" />
     <Build Include="Stored Procedures\CRUD\Customer\Customer_SelectAll.sql" />
     <Build Include="Stored Procedures\CRUD\Customer\Customer_SelectById.sql" />
-    <Build Include="Stored Procedures\CRUD\Customer\Customer_UpdateById.sql" />
-    <Build Include="Stored Procedures\CRUD\Product\Product_Create.sql" />
-    <Build Include="Stored Procedures\CRUD\Product\Product_UpdateById.sql" />
     <Build Include="Stored Procedures\CRUD\Product\Product_DeleteById.sql" />
     <Build Include="Stored Procedures\CRUD\Product\Product_SelectById.sql" />
     <Build Include="Stored Procedures\CRUD\Product\Product_SelectAll.sql" />

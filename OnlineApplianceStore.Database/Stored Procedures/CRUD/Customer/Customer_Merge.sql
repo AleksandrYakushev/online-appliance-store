@@ -25,8 +25,6 @@ set @result = @Id
 	WHEN MATCHED THEN
 	UPDATE
 	SET
-	RoleId = source.RoleId,
-	CityId = source.CityId,
 	[Name] = source.[Name],
 	LastName = source.LastName,
 	Phone = source.Phone,
@@ -34,6 +32,8 @@ set @result = @Id
 	[Address] = source.[Address],
 	Email = source.Email,
 	Birthday = source.Birthday,								
+	RoleId = source.RoleId,
+	CityId = source.CityId,
 	LastUpdateDate = Sysdatetime()									
 
 	WHEN NOT MATCHED THEN

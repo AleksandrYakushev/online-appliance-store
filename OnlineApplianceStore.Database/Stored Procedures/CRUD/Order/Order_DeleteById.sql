@@ -1,7 +1,7 @@
-﻿--CREATE PROCEDURE [dbo].[Order_DeleteById]
---@ID BIGINT
---As
---	UPDATE dbo.[Order]
---	SET 
---	IsDeleted = 1
---	WHERE (Id = @ID)
+﻿CREATE PROCEDURE [dbo].[Order_DeleteById]
+	@Id BIGINT
+As
+	UPDATE dbo.[Order]
+	SET 
+	IsDeleted = 1
+	WHERE (Id = @Id)

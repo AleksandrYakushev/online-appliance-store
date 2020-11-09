@@ -69,62 +69,13 @@ namespace OnlineApplianceStore.Data.Repositories
             return data;
         }
 
-        public DataWrapper<ProductDto> UpdateProduct(ProductDto dto)
-        {
-            var data = new DataWrapper<ProductDto>();
-            try
-            {
-                data.Data = DbConnection.Query<ProductDto>(
-                    StoredProcedure.UpdateCustomerProcedure,
-                    new
-                    {
-                        dto.Name,
-                        dto.Price,
-                        dto.Length,
-                        dto.Width,
-                        dto.Height,
-                        dto.Weight,
-                        dto.Manufacturer,
-                        dto.ProductionYear,
-                        dto.MaxPower,
-                        dto.NumberOfPrograms,
-                        dto.Color,
-                        dto.BowlVolume,
-                        dto.ProductShape,
-                        dto.ProductLife,
-                        dto.NoiseLevel,
-                        dto.MinTemperature,
-                        dto.NumberOfToasts,
-                        dto.BatteryLife,
-                        dto.PowerRegulator,
-                        dto.Timer,
-                        dto.Defrost,
-                        dto.SuperFrost,
-                        dto.Backlight,
-                        dto.Display,
-                        dto.CarboneFilter,
-                        dto.WetCleaning,
-                        dto.GlassCase,
-                        dto.RemoteController,
-                        dto.WithBattery
-                    },
-                    commandType: CommandType.StoredProcedure
-                    ).SingleOrDefault();
-            }
-            catch (Exception ex)
-            {
-                data.ResultMessage = ex.Message;
-            }
-            return data;
-        }
-
         public DataWrapper<ProductDto> SelectProductById(long productId)
         {
             var data = new DataWrapper<ProductDto>();
             try
             {
                 data.Data = DbConnection.Query<ProductDto>(
-                StoredProcedure.CreateProductProcedure,
+                StoredProcedure.SelectProductProcedure,
                 new
                 { productId },
                 commandType: CommandType.StoredProcedure

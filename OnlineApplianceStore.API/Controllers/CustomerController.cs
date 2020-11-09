@@ -95,8 +95,7 @@ namespace OnlineApplianceStore.API.Controllers
         [HttpGet("Search")]
         public ActionResult<List<CustomerOutputModel>> GetSearchResult()
         {
-            return null; 
+            return null;
         }
-        
     }
 }
