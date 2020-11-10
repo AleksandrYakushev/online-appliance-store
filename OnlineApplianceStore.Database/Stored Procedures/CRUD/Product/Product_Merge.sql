@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[Product_Merge]
-	@Id bigint,
+	@Id BIGINT,
 	@Name NVARCHAR(50),
 	@Price DECIMAL,
 	@Length FLOAT,
@@ -30,6 +30,8 @@
 	@RemoteController BIT, 
 	@WithBattery BIT
 AS
+	DECLARE 
+	@result BIGINT
 	MERGE dbo.Product P
 	USING (SELECT @Id, @Name, @Price, @Length, @Width, @Height, @Weight, @Manufacturer, @ProductionYear, @MaxPower, @NumberOfPrograms, @Color,
 	@BowlVolume, @ProductShape, @ProductLife, @NoiseLevel, @MinTemperature, @NumberOfToasts, @BatteryLife, @PowerRegulator, @Timer,
@@ -40,6 +42,7 @@ AS
 	Defrost, SuperFrost, Backlight, Display, CarboneFilter, WetCleaning, GlassCase, RemoteController, WithBattery)
 	ON (P.Id = source.Id)
 
+	
 	WHEN MATCHED THEN
 	UPDATE
 	SET
@@ -108,3 +111,5 @@ AS
 	source.RemoteController,
 	source.WithBattery
 	);
+
+	exec Order_SelectById @result
