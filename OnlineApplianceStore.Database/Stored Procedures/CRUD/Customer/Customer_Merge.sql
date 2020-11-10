@@ -1,20 +1,20 @@
 ﻿CREATE PROCEDURE [dbo].[Customer_Merge]
-	@Id bigint,
-	@RoleId int,
-	@CityId int,
-	@Name nvarchar(30),
-	@LastName nvarchar(30),
-	@Phone nvarchar(20),
-	@Password nvarchar(30),
-	@Address nvarchar(100),
-	@Email nvarchar(50),
-	@Birthday date
+	@Id BIGINT,
+	@RoleId INT,
+	@CityId INT,
+	@Name NVARCHAR(30),
+	@LastName NVARCHAR(30),
+	@Phone NVARCHAR(20),
+	@Password NVARCHAR(30),
+	@Address NVARCHAR(100),
+	@Email NVARCHAR(50),
+	@Birthday DATE
 AS
-declare
-@result bigint
-set @result = @Id
-	MERGE dbo.Customer as C
-	USING (select @Id, @RoleId, @CityId, @Name, @LastName, @Phone, @Password,
+	DECLARE
+	@result BIGINT
+	SET @result = @Id
+	MERGE dbo.Customer C
+	USING (SELECT @Id, @RoleId, @CityId, @Name, @LastName, @Phone, @Password,
 	@Address, @Email, @Birthday)
 	AS 
 	source (Id, RoleId, CityId, [Name], LastName, Phone, [Password],
@@ -52,5 +52,5 @@ set @result = @Id
 	Sysdatetime(),
 	Sysdatetime()
 	);
-	if(@result is null)set @result = SCOPE_IDENTITY()
+	
 	exec Customer_SelectById @result

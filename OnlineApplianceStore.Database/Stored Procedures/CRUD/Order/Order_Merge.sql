@@ -36,4 +36,4 @@ AS
 	);
 
 	if(@result is null)set @result = SCOPE_IDENTITY()
-	exec Order_SelectById	 @result
+	exec Order_SelectById @result
